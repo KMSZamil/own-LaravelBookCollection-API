@@ -27,3 +27,4 @@ Route::controller(AuthController::class)->group(function () {
 Route::get('get_user_type', [UserTypeController::class, 'getType']);
 
 Route::apiResource('books', BookController::class);
+Route::post('/books/update', [BookController::class, 'update']);
