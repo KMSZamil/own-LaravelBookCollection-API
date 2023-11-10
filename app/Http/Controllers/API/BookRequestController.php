@@ -75,12 +75,23 @@ class BookRequestController extends Controller
                 ->get()
         );
     }
+
     public function students_book_approved_list(Request $request)
     {
         $user_id = $request->user_id;
         return new BookRequestCollection(
             BookRequest::where('book_requested_by', $user_id)
                 ->where('approval', 'Y')
+                ->get()
+        );
+    }
+
+    public function students_book_request_pending_list(Request $request)
+    {
+        $user_id = $request->user_id;
+        return new BookRequestCollection(
+            BookRequest::where('book_requested_by', $user_id)
+                ->where('approval', NULL)
                 ->get()
         );
     }
