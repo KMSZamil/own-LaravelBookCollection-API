@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('book_request_details', function (Blueprint $table) {
-            $table->unsignedBigInteger('book_request_id');
-            $table->integer('book_id');
-            $table->timestamps();
+        Schema::table('book_requests', function (Blueprint $table) {
+            $table->dateTime('approved_date')->nullable()->after('approved_by');
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('book_request_details');
+        Schema::table('book_requests', function (Blueprint $table) {
+            $table->dropColumn('approved_date');
+        });
     }
 };

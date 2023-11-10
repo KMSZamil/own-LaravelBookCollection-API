@@ -10,9 +10,4 @@ class Book extends Model
     use HasFactory;
 
     public $guarded = [];
-
-    public function book_request_details()
-    {
-        return $this->hasMany(BookRequestDetails::class, 'book_request_id', 'id');
-    }
 }

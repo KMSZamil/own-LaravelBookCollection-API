@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('book_requests', function (Blueprint $table) {
             $table->id();
-            $table->string('approval',1)->default('N');
+            $table->string('approval',1)->nullable();
             $table->integer('approved_by')->nullable();
             $table->integer('book_requested_by');
             $table->integer('created_by');
