@@ -16,7 +16,7 @@ After that do the following:
 
 - Student email password:
 
-    zamil@gmail.com
+    student@gmail.com
     password
 
 - Librarian email password:
