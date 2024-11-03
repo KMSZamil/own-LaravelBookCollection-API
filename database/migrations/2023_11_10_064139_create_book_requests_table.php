@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('approval',1)->nullable();
             $table->integer('approved_by')->nullable();
+            $table->dateTime('approved_date')->nullable();
             $table->integer('book_requested_by');
             $table->integer('created_by');
             $table->timestamps();

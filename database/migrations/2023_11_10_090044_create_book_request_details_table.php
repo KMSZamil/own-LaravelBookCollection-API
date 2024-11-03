@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('book_request_details', function (Blueprint $table) {
             $table->unsignedBigInteger('book_request_id');
-            $table->integer('book_id');
+            $table->foreignId('book_id')->constrained('books');
             $table->timestamps();
         });
     }
