@@ -16,6 +16,10 @@ Make a `.env` file and connect with your database
 
 `$ php artisan db:seed`
 
+`$ php artisan jwt:secret`
+
+`$ php artisan config:cache`
+
 `$ php artisan serve`
 
 - Student email password:
