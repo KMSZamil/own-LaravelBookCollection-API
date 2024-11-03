@@ -6,6 +6,8 @@ Or, Download the .zip file
 
 After that do the following:
 
+Make a `.env` file and connect with your database
+
 `$ composer update`
 
 `$ php artisan migrate`
@@ -24,6 +26,6 @@ After that do the following:
     librarian@gmail.com
     password
 
-After login an authorization token provided. This token needs for getting all the api response.
+After login an authorization token is provided. This token is needed for getting all the API responses.
 
 The exported json file of the API is provided with the code in /public/doc/ folder.
