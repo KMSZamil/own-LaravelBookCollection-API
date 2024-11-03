@@ -10,6 +10,8 @@ Make a `.env` file and connect with your database
 
 `$ composer update`
 
+`$ PHP artisan key:generate`
+
 `$ php artisan migrate`
 
 `$ php artisan db:seed`
